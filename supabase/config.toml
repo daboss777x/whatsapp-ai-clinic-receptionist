@@ -1,0 +1,6 @@
+# Minimal Supabase config for this project.
+project_id = "whatsapp-ai-agent"
+# Meta can't log in to Supabase, so the webhook must accept calls without a Supabase login (JWT).
+# Our own security is the Meta signature check inside the function.
+[functions.whatsapp-webhook]
+verify_jwt = false
